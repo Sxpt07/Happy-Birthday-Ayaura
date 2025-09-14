@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Happy Birthday Ayaura ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:linear-gradient(180deg,#ffdde1,#ee9ca7);
+      font-family:'Poppins',sans-serif;
+      text-align:center;
+      height:100vh;overflow:hidden;
+      display:flex;flex-direction:column;justify-content:center;align-items:center;
+    }
+    h1{
+      font-family:'Great Vibes',cursive;
+      font-size:70px;
+      color:#ff2d55;
+      margin-bottom:15px;
+    }
+    h2{
+      font-size:24px;
+      font-weight:600;
+      color:#fff;
+      margin-bottom:10px;
+    }
+    p{
+      max-width:600px;
+      font-size:18px;
+      color:#fff;
+      line-height:1.6;
+    }
+
+    /* hearts floating */
+    .heart{
+      position:fixed;
+      bottom:-10px;
+      color:#ff2d55;
+      font-size:20px;
+      animation:floatUp 5s linear infinite;
+    }
+    @keyframes floatUp{
+      0%{transform:translateY(0);opacity:1}
+      100%{transform:translateY(-110vh);opacity:0}
+    }
+  </style>
+</head>
+<body>
+  <h1>Selamat Ulang Tahun Ayaura 🎂</h1>
+  <h2>Untuk Kamu yang Spesial ❤️</h2>
+  <p>
+ Selamat ulang tahun, Ayaura cintaku ❤️
+
+Hari ini adalah hari spesial, hari dimana dunia diberkahi dengan kehadiranmu.
+Aku bersyukur setiap detik bisa mengenal dan mencintaimu.Semoga di setiap langkahmu, kebahagiaan selalu menyertai.
+Semoga setiap mimpimu jadi nyata, dan setiap senyummu tetap jadi cahaya buatku. Aku janji akan selalu ada di sampingmu, bukan hanya di hari ini,
+tapi untuk setiap hari yang kita lewati bersama. Aku sayang banget sama kamu, Ayaura. Selamat bertambah usia, cintaku… mari kita rayakan cinta ini selamanya 💕✨
+  </p>
+
+  <!-- Musik otomatis -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // bikin love sederhana naik ke atas
+    function createHeart(){
+      const heart=document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML="💖";
+      heart.style.left=Math.random()*100+"vw";
+      heart.style.fontSize=Math.random()*20+15+"px";
+      document.body.appendChild(heart);
+      setTimeout(()=>heart.remove(),5000);
+    }
+    setInterval(createHeart,400);
+  </script>
+</body>
+</html>
